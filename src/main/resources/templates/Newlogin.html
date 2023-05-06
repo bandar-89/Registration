@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration and Login App</title>
+
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+	
+</head>
+<body>
+
+	<!-- create navigation bar ( header) -->
+	<nav >
+	
+			<div >
+				
+				<a  href="#" th:href="@{/register}">Registration and
+					Login </a>
+			</div>
+		
+	</nav>
+	
+	<br>
+	<br>
+	<div >
+		<div>
+			<div >
+				
+				<h1> User Login Page </h1>
+				<form th:action="@{/ki}" method="post">
+					
+					<!-- error message -->
+					<div th:if="${param.error}">
+						<div class="alert alert-danger">Invalid username or
+							password.</div>
+					</div>
+				
+					<!-- logout message -->
+					<div th:if="${param.logout}">
+						<div class="alert alert-info">You have been logged out.</div>
+					</div>
+					
+					<div >
+						<label for ="username"> Username </label> 
+						<input type="text" class = "form-control" id ="username" name = "username"
+						placeholder="Enter Email ID" autofocus="autofocus">
+					</div>
+					
+					<div >
+						<label for="password">Password</label>
+						<input type="password"
+							id="password" name="password" class="form-control"
+							placeholder="Enter Password" />
+					</div>
+					
+					<div >
+						<div >
+							<div>
+								<input type="submit" name="login-submit" id="login-submit"
+									 value="Log In" />
+							</div>
+						</div>
+					</div>
+				</form>
+				<div >
+						<span>New user? <a href="/" th:href="@{/register}">Register
+								here</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
