@@ -17,7 +17,7 @@ public class controller {
 	userservice service;
 	
 	
-	//very first page when we call the application on local host on 8091 port
+	//very first page when we call the application on local host on port define in application.properties file
 	// this is our custom login page by default set in security config 
 
 	@GetMapping("/log")
@@ -38,7 +38,7 @@ public class controller {
 		return "Newreg";
 	}
 
-	
+	 //custom login handler method
 	@GetMapping("/ki")
 	public void  ji() {
 		
@@ -46,7 +46,7 @@ public class controller {
 	}
 	
 	
-	// for the first page home fire this 
+	// after successful login 
 	@GetMapping("/hi")
 	public String home() {
 		return "index";
