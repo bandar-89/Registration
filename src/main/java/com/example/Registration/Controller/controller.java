@@ -38,12 +38,7 @@ public class controller {
 		return "Newreg";
 	}
 
-	 //custom login handler method
-	@GetMapping("/ki")
-	public void  ji() {
-		
-		
-	}
+
 	
 	
 	// after successful login 
